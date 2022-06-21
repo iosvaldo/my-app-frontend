@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card'
 
 function AppointmentList({appointmentType, name, date}) {
 
+  
 
 
   return (

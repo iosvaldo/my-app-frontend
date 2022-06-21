@@ -1,18 +1,33 @@
-
+import React from 'react';
 import '../App.css';
+import Home   from './Home'
 import Navigate from './Navigate';
 import Appointments from './Appointments'
-import AppointmentList from './AppointmentList';
-// import ‘bootstrap/dist/css/bootstrap.min.css’;
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
 
 
 function App() {
   return (
-    <div className="App">
-      <Navigate />
-      <Appointments />
-  
-    </div>
+    <Router>
+      <div className="App">
+        <Navigate className="App-header"/>
+        <header >
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route exact path="/appointments">
+                <Appointments />
+              </Route>
+              <Route exact path="/form">
+                <Appointments />
+              </Route>
+            </Switch>
+        </header>
+      </div>
+    </Router>
+     
   );
 }
 

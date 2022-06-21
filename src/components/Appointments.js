@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import AppointmentList from './AppointmentList'
 
-function Appointments() {
+function Appointments({name}) {
 
   const [appointments,setAppointments]= useState([])
 
@@ -22,7 +22,8 @@ function Appointments() {
 
   return (
     <div>
-      <AppointmentList />
+      <h1>home</h1>
+      <AppointmentList name={name}/>
       {/* <AppointmentList appointmentList = {appointmentList} /> */}
     
     </div>
