@@ -5,14 +5,15 @@ function Appointments() {
   const [appointments,setAppointments]= useState([])
 
   useEffect(()=> {
-    fetch('https://localhost:3000/appointments')
+    fetch('https://localhost:9292/appointments')
     .then(res => res.json())
-    .then(appointments => setAppointments(appointments))
+    .then(data => console.log(data))
   }, [])
 
   return (
     <div>
-
+      {/* <AppointmentList / > */}
+      
     </div>
   )
 }

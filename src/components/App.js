@@ -1,7 +1,7 @@
 
-import './App.css';
+import '../App.css';
 import Navigate from './Navigate';
-import ‘bootstrap/dist/css/bootstrap.min.css’;
+// import ‘bootstrap/dist/css/bootstrap.min.css’;
 
 
 function App() {

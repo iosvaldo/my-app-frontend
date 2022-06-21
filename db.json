@@ -1,0 +1,101 @@
+{
+  "appointments":
+  [
+    {
+      "id": 1,
+      "username": "Sinclair",
+      "date": "5/21/2022",
+      "appointment_type" :"haircut",
+      "salon_id" : 1,
+      "user_id": 1
+    },
+    {
+      "id": 2,
+      "username": "Micaela",
+      "date": "5/21/2022",
+      "appointment_type" :"hair color treatment",
+      "salon_id" : 1,
+      "user_id": 2
+    },
+    {
+      "id": 3,
+      "username": "James",
+      "date": "5/21/2022",
+      "appointment_type" :"manicure",
+      "salon_id" : 1,
+      "user_id": 3
+    },
+    {
+      "id": 4,
+      "username": "Mohammed",
+      "date": "5/21/2022",
+      "appointment_type" :"haircut",
+      "salon_id" : 1,
+      "user_id": 4
+    },
+    {
+      "id": 5,
+      "username": "Yeming",
+      "date": "5/21/2022",
+      "appointment_type" :"massage",
+      "salon_id" : 1,
+      "user_id": 5
+    },
+    {
+      "id": 6,
+      "username": "NyiNyi",
+      "date": "5/21/2022",
+      "appointment_type" :"haircut",
+      "salon_id" : 1,
+      "user_id": 6
+    },
+    {
+      "id": 7,
+      "username": "Omar",
+      "date": "5/21/2022",
+      "appointment_type" :"haircut",
+      "salon_id" : 1,
+      "user_id": 7
+    },
+    {
+      "id": 8,
+      "username": "Tashi",
+      "date": "5/21/2022",
+      "appointment_type" :"pedicure",
+      "salon_id" : 1,
+      "user_id": 8
+    },
+    {
+      "id": 9,
+      "username": "William",
+      "date": "5/21/2022",
+      "appointment_type" :"haircut",
+      "salon_id" : 1,
+      "user_id": 9
+    },
+    {
+      "id": 10,
+      "username": "Yixin",
+      "date": "5/21/2022",
+      "appointment_type" :"pedicure",
+      "salon_id" : 1,
+      "user_id": 10
+    }
+     ],
+  "Salon": 
+  [
+    {
+      "id": 1,
+      "name":"World Class Salon",
+      "address":"11 Broadway NY, New York, USA",
+      "phone_number":4
+    }
+  ],
+  "users": 
+  [
+    {
+      "id": 1,
+      "name":"John"
+    }
+  ]
+}
