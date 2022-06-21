@@ -1,11 +1,14 @@
 import React from 'react'
+import logo from '../Images/greg-trowman-jsuWg7IXx1k-unsplash.jpg'
+
 
 
 
 function Home() {
   return (
-    <div>
-      
+    <div class="container">
+      <h1 class="main-title">Welcome to World Class Hair Studio</h1>
+      <img class="hero-image" src={logo} alt="Salon logo" />
     </div>
   )
 }
