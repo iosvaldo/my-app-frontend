@@ -1,4 +1,7 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+
 div.gallery {
   margin: 50px;
   border: 1px solid #ccc;
@@ -77,4 +80,21 @@ div.desc {
 .button-1:hover,
 .button-1:focus {
   background-color: #F082AC;
+}
+
+.hero-image{
+  width:100%;
+  margin:auto;
+  margin-top:3%;
+  box-shadow: 5px 5px 15px 5px #000000;
+
+}
+
+.main-title{
+  text-align: center;
+  Padding-top:3%;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  font-weight: 900;
+  
 }

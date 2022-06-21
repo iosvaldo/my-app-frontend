@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import AppointmentList from './AppointmentList'
 import NewForm from './NewForm';
 
-function Appointments() {
+function Appointments({name}) {
 
   const [appointments,setAppointments]= useState([])
 
