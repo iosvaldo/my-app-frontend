@@ -1,13 +1,11 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Appointments from './Appointments'
-import Form from 'react-bootstrap/Form';
+// import Form from 'react-bootstrap/Form';
 
-function Form({appointmentList}) {
-  const [formData, setFormData] = useState([])
-
-
+function Form() {
+  // const [formData, setFormData] = useState([])
   return (
-    <div>NewAppointment</div>
+    <div>New Appointment</div>
   )
 }
 

@@ -8,7 +8,7 @@ function AppointmentList({appointmentType, name, date, addAppointment, appointme
 
   return (
     <div>
-      <h1></h1>
+      <h1>Hello</h1>
       <Card style={{ width: '18rem' }}>
         <Card.Body>
         <Card.Title>Appointment for: {name}</Card.Title>
