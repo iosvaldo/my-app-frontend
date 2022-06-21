@@ -67,6 +67,13 @@ div.desc {
   align-items: stretch;
 }
 
+.button-2 {
+  position: relative;
+  text-align: center;
+  background-color: #f20d703b;
+ 
+}
+
 .button-1:hover,
 .button-1:focus {
   background-color: #F082AC;
