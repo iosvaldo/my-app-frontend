@@ -5,6 +5,7 @@ import Home   from './Home'
 import Navigate from './Navigate';
 import Appointments from './Appointments'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import NewForm from './NewForm';
 
 
 function App() {
@@ -21,11 +22,11 @@ function App() {
                 <Appointments />
               </Route>
               <Route exact path="/form">
-                <Appointments />
+                <NewForm />
               </Route>
-              <Route exact path="/services">
+              {/* <Route exact path="/services">
                 <Services />
-              </Route>
+              </Route> */}
             </Switch>
         </header>
       </div>
