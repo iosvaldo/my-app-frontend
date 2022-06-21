@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 
 function Navigate() {
-  const {salons, setSalons} = useState("")
+  // const {salons, setSalons} = useState("")
 
   useEffect(() => {
     fetch('http://localhost:9292/appointments')
@@ -17,7 +17,7 @@ function Navigate() {
   // const name = console.log({salon.name})
 // const salon = salons.map((salon) => (
 //   name = {salon.name}
-  // return ())
+  return (
 
     <div>
       <Navbar bg="dark" variant="dark">
@@ -32,7 +32,7 @@ function Navigate() {
       </Navbar>
 
     </div>
-  
+  )
 }
 
 export default Navigate
