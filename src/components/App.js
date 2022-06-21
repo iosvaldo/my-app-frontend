@@ -2,6 +2,7 @@
 import '../App.css';
 import Navigate from './Navigate';
 import Appointments from './Appointments'
+import Services from './Services';
 import AppointmentList from './AppointmentList';
 // import ‘bootstrap/dist/css/bootstrap.min.css’;
 
@@ -11,6 +12,7 @@ function App() {
     <div className="App">
       <Navigate />
       <Appointments />
+      <Services />
   
     </div>
   );

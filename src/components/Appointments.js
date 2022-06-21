@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import AppointmentList from './AppointmentList'
+import Form from './Form';
 
 function Appointments() {
 
@@ -11,20 +12,25 @@ function Appointments() {
       .then((data) => setAppointments(data));
   }, []);
 
+  function addAppointment(newData) {
+    return setAppointments([...appointments, newData]);
+}
+
   const appointmentList = appointments.map((appointment) => (
     <AppointmentList 
     key = {appointment.id}
     name = {appointment.username}
     appointmentType = {appointment.appointment_type}
     date = {appointment.date}
+    addAppointment = {addAppointment}
     />
   ))
 
   return (
     <div>
-      <AppointmentList />
+      {appointmentList}
       {/* <AppointmentList appointmentList = {appointmentList} /> */}
-    
+    <Form appointmentList = {appointmentList}/>
     </div>
   )
 }

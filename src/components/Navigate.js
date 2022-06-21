@@ -8,22 +8,22 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
 function Navigate() {
-  const {salons, setSalons} = useState("")
+  // const {salons, setSalons} = useState("")
 
-  useEffect(() => {
-    fetch('http://localhost:9292/salons')
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch('http://localhost:9292/salons')
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data));
+  // }, []);
   // const name = console.log({salon.name})
 // const salon = salons.map((salon) => (
 //   name = {salon.name}
-  // return ())
+  return (
 
     <div>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">{salons.name}</Navbar.Brand>
+          <Navbar.Brand href="#home">Name</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#features">Features</Nav.Link>
@@ -33,7 +33,7 @@ function Navigate() {
       </Navbar>
 
     </div>
-  
+  )
 }
 
 export default Navigate
