@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import AppointmentList from './AppointmentList'
-import Form from './Form';
+import NewForm from './NewForm';
 
 function Appointments({name}) {
 
@@ -15,6 +15,10 @@ function Appointments({name}) {
   function addAppointment(newData) {
     return setAppointments([...appointments, newData]);
 }
+  function handleDelete(id){
+  const filteredList = appointments.filter((appointment) => appointment.id !== id)
+    setAppointments(filteredList)
+  }
 
   const appointmentList = appointments.map((appointment) => (
     <AppointmentList 
@@ -22,7 +26,7 @@ function Appointments({name}) {
     name = {appointment.username}
     appointmentType = {appointment.appointment_type}
     date = {appointment.date}
-    addAppointment = {addAppointment}
+    deleteItem={handleDelete}
     />
   ))
 
@@ -30,7 +34,7 @@ function Appointments({name}) {
     <div>
       {appointmentList}
       {/* <AppointmentList appointmentList = {appointmentList} /> */}
-    <Form appointmentList = {appointmentList}/>
+    <NewForm addAppointment = {addAppointment}/>
     </div>
   )
 }

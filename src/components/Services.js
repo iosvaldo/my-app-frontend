@@ -18,7 +18,7 @@ function Services() {
      <a target="_blank" > 
         <img src={haircolor} alt="image of woman flicking her bright pink hair" width="600" height="400"/>
     </a>
-    <div class="desc"><h5>Hair Color</h5>
+    <div class="desc"><h5>Color Treatment</h5>
     Transform your hair with our cruelty-free hair color treatments
     </div>
     <button className="button-1">Book Appointment</button>
