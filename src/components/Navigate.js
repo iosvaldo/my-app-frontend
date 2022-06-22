@@ -11,7 +11,7 @@ function Navigate() {
   // const {salons, setSalons} = useState("")
 
   useEffect(() => {
-    fetch('http://localhost:9292/appointments')
+    fetch('http://localhost:9292')
       .then((res) => res.json())
       .then((data) => console.log(data));
   }, []);
@@ -26,8 +26,8 @@ function Navigate() {
           <Navbar.Brand href="/"><img src={logo} alt="Memes logo" style={{width:100, marginTop: -7}}/></Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/appointments">Appointment</Nav.Link>
             <Nav.Link href="/form">Book Appointment</Nav.Link>
+            <Nav.Link href="/appointments">Appointment</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

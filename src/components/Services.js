@@ -12,11 +12,11 @@ function Services() {
   return (
 <div>
     <div>
-        <img className="image" src={scissors} alt="image of scissors"/>
+        <img className="image" src={scissors} alt="scissors"/>
     </div>
     <div class="gallery">
-     <a target="_blank" > 
-        <img src={haircolor} alt="image of woman flicking her bright pink hair" width="600" height="400"/>
+     <a href="/" target="_blank" > 
+        <img src={haircolor} alt="woman flicking pink hair" width="600" height="400"/>
     </a>
     <div class="desc"><h5>Color Treatment</h5>
     Transform your hair with our cruelty-free hair color treatments

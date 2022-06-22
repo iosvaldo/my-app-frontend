@@ -22,9 +22,10 @@ function AppointmentList({appointmentType, name, deleteItem, date, appointmentLi
       <Card.Text>
       We are so excited to see you! Please use the link below for directions to the salon.
         </Card.Text>
-      <Card.Link href="#">Directions</Card.Link>
-      <button class="button-2">Edit</button> 
-      <button > 🗑️  </button>
+      {/* <Card.Link href="#">Directions</Card.Link> */}
+      <Button class="button-2"  variant="primary">Edit</Button>
+        <Button class="button-2"  variant="danger">🗑️</Button>
+    
       {/* onClick={handleDelete}> */}
       </Card.Body>
       </Card>
@@ -38,6 +39,9 @@ function AppointmentList({appointmentType, name, deleteItem, date, appointmentLi
         {/* </Card.Body>
       <Card.Footer className="text-muted"></Card.Footer>
     </Card> */} 
+
+
+    
     
     </div>
   )
