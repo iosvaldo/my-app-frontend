@@ -5,23 +5,24 @@ import mensHaircut from '../Images/mens_haircut.jpg'
 import manicure from '../Images/manicure.jpg'
 import pedicure from '../Images/pedicure.jpg'
 import haircut from '../Images/haircut.jpg'
-import scissors from '../Images/scissors.jpg'
+import scissors from '../Images/scissors2.jpg'
 
 function Services() {
 
   return (
 <div>
     <div>
-        <img className="image" src={scissors} alt="image of scissors"/>
+        <img className="image" src={scissors} alt="scissors"/>
     </div>
     <div class="gallery">
-     <a target="_blank" > 
-        <img src={haircolor} alt="image of woman flicking her bright pink hair" width="600" height="400"/>
+     <a href="/" target="_blank" > 
+        <img src={haircolor} alt="woman flicking pink hair" width="600" height="400"/>
     </a>
     <div class="desc"><h5>Color Treatment</h5>
     Transform your hair with our cruelty-free hair color treatments
     </div>
-    <button className="button-1">Book Appointment</button>
+    <a href='/form'className="button-1" >Book Appointment</a>
+   
 </div>
 
 <div class="gallery">
@@ -30,7 +31,8 @@ function Services() {
     </a>
     <div class="desc"><h5>Haircut</h5>
         Includes shampoo, scalp massage and blowdry</div>
-    <button className="button-1">Book Appointment</button>
+        <a href='/form'className="button-1" >Book Appointment</a>
+  
 </div>
 
 <div class="gallery">
@@ -39,7 +41,8 @@ function Services() {
     </a>
     <div class="desc"><h5>Manicure</h5>
         Manicure perfect for any occasion</div>
-    <button className="button-1">Book Appointment</button>
+        <a href='/form'className="button-1" >Book Appointment</a>
+    
 </div>
 
 <div class="gallery">
@@ -48,7 +51,8 @@ function Services() {
     </a>
     <div class="desc"><h5>Pedicure</h5>
         Includes a CBD foot massage</div>
-    <button className="button-1">Book Appointment</button>
+        <a href='/form'className="button-1" >Book Appointment</a>
+   
 </div>
 
 <div class="gallery">
@@ -57,7 +61,8 @@ function Services() {
     </a>
     <div class="desc"><h5>Men's Haircut</h5>
         Clean, cut, shave</div>
-    <button className="button-1">Book Appointment</button>
+        <a href='/form'className="button-1" >Book Appointment</a>
+  
 </div>
 
 </div>
