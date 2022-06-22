@@ -24,9 +24,9 @@ function App() {
               <Route exact path="/form">
                 <NewForm />
               </Route>
-              {/* <Route exact path="/services">
+              <Route exact path="/services">
                 <Services />
-              </Route> */}
+              </Route>
             </Switch>
         </header>
       </div>

@@ -3,14 +3,16 @@ import Card from 'react-bootstrap/Card'
 import NewForm from './NewForm'
 import Button from 'react-bootstrap/Button';
 
-function AppointmentList({appointmentType, name, deleteItem, date, appointmentList}) {
+function AppointmentList({appointmentType,id, name, onDeleteAppoint, date, appointmentList}) {
 
-  // function handleDelete(id){
-  //   fetch(`http://localhost:9292/appointments/${id}`, {
-  //     method: "DELETE"
-  //   })
-  //   .then(deleteItem(id))
-  // }
+  console.log(id)
+  function handleDeleteClick(){
+    fetch(`http://localhost:9292/appointments/${id}`,{
+      method: 'DELETE',
+    })
+    .then((r)=> r.json()
+    .then((deletedAppointment)=> onDeleteAppoint(deletedAppointment)))
+  }
 
   return (
     <div>
@@ -24,7 +26,7 @@ function AppointmentList({appointmentType, name, deleteItem, date, appointmentLi
         </Card.Text>
       {/* <Card.Link href="#">Directions</Card.Link> */}
       <Button class="button-2"  variant="primary">Edit</Button>
-        <Button class="button-2"  variant="danger">🗑️</Button>
+        <Button class="button-2"  variant="danger" onClick={handleDeleteClick}>🗑️</Button>
     
       {/* onClick={handleDelete}> */}
       </Card.Body>

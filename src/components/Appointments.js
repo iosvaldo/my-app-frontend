@@ -22,6 +22,7 @@ function Appointments({name}) {
 
   const appointmentList = appointments.map((appointment) => (
     <AppointmentList 
+    id = {appointment.id}
     key = {appointment.id}
     name = {appointment.username}
     appointmentType = {appointment.appointment_type}
@@ -29,6 +30,7 @@ function Appointments({name}) {
     deleteItem={handleDelete}
     />
   ))
+  console.log(appointmentList)
 
   return (
     <div>
