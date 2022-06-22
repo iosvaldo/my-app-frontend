@@ -18,7 +18,7 @@ div.gallery {
 }
 
 div.gallery:hover {
-  border: 1px solid #777;
+  border: 2px solid #777;
 
 
 }
@@ -51,7 +51,7 @@ div.desc {
   cursor: pointer;
   display: inline-block;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 500;
   height: 35px;
   line-height: 20px;
@@ -96,5 +96,34 @@ div.desc {
   font-family: 'Dancing Script', cursive;
   font-weight: bold;
   font-weight: 900;
-  
+
 }
+
+.card-body{
+text-align: center;
+
+}
+
+.btn-primary{
+ margin:1%;
+}
+
+.main-form{
+  
+  width:60%;
+  margin:auto;
+}
+
+.form-title{
+  text-align: center;
+  margin-top: 3%;
+}
+
+.main-services{
+ text-align:center;
+}
+
+.card-container {
+  width:100%;
+}
+

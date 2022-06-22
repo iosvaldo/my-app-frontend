@@ -34,9 +34,10 @@ function Appointments({name}) {
 
   return (
     <div>
-      {appointmentList}
-      {/* <AppointmentList appointmentList = {appointmentList} /> */}
-    <NewForm addAppointment = {addAppointment}/>
+      
+      <br></br>
+       <NewForm addAppointment = {addAppointment}/>
+       {appointmentList}
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import Appointments from './Appointments'
+// import Appointments from './Appointments'
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
@@ -34,7 +34,8 @@ function NewForm( {appointmentList, addAppointment} ) {
 
   return (
     <div>
-    <Form onSubmit={handleSubmit}>
+      <h2 className="form-title">Book an Appointment</h2>
+    <Form className="main-form" onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
         <Form.Label>Name:</Form.Label>
         <Form.Control onChange={handleOnChange} name="username" type="text"  placeholder="Enter your full name here" />

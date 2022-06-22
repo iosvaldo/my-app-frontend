@@ -8,10 +8,11 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import NewForm from './NewForm';
 
 
+
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="header">
         <Navigate className="App-header"/>
         <header >
             <Switch>
