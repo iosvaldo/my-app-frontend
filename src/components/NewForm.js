@@ -17,8 +17,8 @@ function NewForm( {appointmentList, addAppointment} ) {
   } 
 
   function handleSubmit(e){
+    alert("Thank you for booking an appointment. See you soon!")
     e.preventDefault()
-    console.log(formData)
     fetch("http://localhost:9292/appointments", {
       method: "POST",
       headers: {
@@ -44,7 +44,7 @@ function NewForm( {appointmentList, addAppointment} ) {
         <Form.Label>Date</Form.Label>
         <Form.Control onChange={handleOnChange} name="date" as="textarea" rows={1} />
       </Form.Group>
-      <Form.Select onChange={handleOnChange} name="appointment_type" aria-label="Default select example">
+      <Form.Select onChange={handleOnChange} name="service" aria-label="Default select example">
       <option>Services</option>
       <option value="Color Treatmemt">Color Treatment</option>
       <option value="Haircut">Haircut</option>

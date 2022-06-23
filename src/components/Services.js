@@ -8,7 +8,7 @@ import haircut_img from '../Images/haircut_img.jpg'
 import scissors from '../Images/scissors2.jpg'
 
 function Services({haircut}) {
-console.log(haircut)
+
   return (
 <div className="main-services">
     

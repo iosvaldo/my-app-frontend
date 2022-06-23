@@ -4,6 +4,7 @@ import NewForm from './NewForm'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
+
 function AppointmentList({appointmentType,id, name, deleteItem, date, appointments}) {
 
   
@@ -38,24 +39,24 @@ function AppointmentList({appointmentType,id, name, deleteItem, date, appointmen
     .then(deleteItem(id))
   }
 
+  // const appointmentType = services.map(service => service.appointment_type)
+
   return (
     <div>
-      <Card style={{ width: '18rem' }}>
-
-        <Card.Body className="card-container">
-          <Card.Title>Appointment for: {name}</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">{appointmentType}</Card.Subtitle>
+      <Card className="card-container" style={{ width: '18rem' }}>
+        <Card.Body >
+          <Card.Title>{name}</Card.Title>
+          <Card.Subtitle className="mb-2 text-muted"></Card.Subtitle>
           <Card.Subtitle className="mb-2 text-muted">{date}</Card.Subtitle>
-          <Card.Text>We are so excited to see you!.</Card.Text> 
+          <Card.Text>We are so excited to see you!</Card.Text> 
           <Button variant="danger" onClick={handleClick}>♡ {likes}</Button>  
           <Button class="button-2"  variant="warning" onClick={handleDeleteClick}>🗑️</Button> 
-          <Button class="button-2"  variant="primary" onClick={updateUser}>Edit</Button> 
+    
         </Card.Body>
       </Card>
       
       
     </div>
-
   )
 }
 
