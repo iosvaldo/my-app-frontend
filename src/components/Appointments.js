@@ -3,7 +3,6 @@ import AppointmentList from './AppointmentList'
 import NewForm from './NewForm';
 
 function Appointments({name}) {
-
   const [appointments,setAppointments]= useState([])
 
   useEffect(() => {
@@ -25,7 +24,7 @@ function Appointments({name}) {
     id = {appointment.id}
     key = {appointment.id}
     name = {appointment.username}
-    appointmentType = {appointment.appointment_type}
+    appointmentType = {appointment.service_id}
     date = {appointment.date}
     deleteItem={handleDelete}
     />
