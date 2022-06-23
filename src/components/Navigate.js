@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -8,11 +8,11 @@ import logo from '../Images/world_class_logo2.jpg'
 function Navigate() {
 
 
-  useEffect(() => {
-    fetch('http://localhost:9292')
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch('http://localhost:9292')
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data));
+  // }, []);
 
   return (
 

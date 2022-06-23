@@ -125,5 +125,15 @@ text-align: center;
 
 .card-container {
   width:100%;
+  margin: auto;
+  border: 1px solid #ccc;
+  width: 250px;
+  text-align: center;
+  align-items: stretch;
+  float: left;
+  /* height: 100%; */
+  /* display: inline-block;  */
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
