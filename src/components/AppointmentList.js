@@ -4,14 +4,33 @@ import NewForm from './NewForm'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-function AppointmentList({ id, key, name, deleteItem, service, date, serviceList, appointmentType }) {
-  // const [services, setServices] = useState([])
 
-  // useEffect(() => {
-  //   fetch('http://localhost:9292/services')
-  //     .then((res) => res.json())
-  //     .then((services) => setServices(services));
-  // }, []);
+function AppointmentList({appointmentType,id, name, deleteItem, date, appointments}) {
+
+  
+
+  const [editAppointment, setEditAppointment] = useState([]);
+ 
+  const [likes, setLikes] = useState (0)
+
+   function handleClick(e) {
+    setLikes(likes => likes+1)
+  }
+
+
+  function updateUser(e) {
+    e.preventDefault();
+    fetch(`http://localhost:9292/appointments/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+
+      }),
+    })
+      .then((userName) => console.log(id));
+  }
 
   function handleDeleteClick(){
     fetch(`http://localhost:9292/appointments/${id}`,{
@@ -29,10 +48,14 @@ function AppointmentList({ id, key, name, deleteItem, service, date, serviceList
           <Card.Title>{name}</Card.Title>
           <Card.Subtitle className="mb-2 text-muted"></Card.Subtitle>
           <Card.Subtitle className="mb-2 text-muted">{date}</Card.Subtitle>
-          <Card.Text>We are so excited to see you!</Card.Text>   
-          <Button class="button-2"  variant="danger" onClick={handleDeleteClick}>🗑️</Button> 
+          <Card.Text>We are so excited to see you!</Card.Text> 
+          <Button variant="danger" onClick={handleClick}>♡ {likes}</Button>  
+          <Button class="button-2"  variant="warning" onClick={handleDeleteClick}>🗑️</Button> 
+    
         </Card.Body>
-      </Card>    
+      </Card>
+      
+      
     </div>
   )
 }
