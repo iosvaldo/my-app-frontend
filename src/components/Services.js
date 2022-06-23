@@ -19,7 +19,7 @@ function Services({haircut}) {
     <div class="desc"><h5>Color Treatment</h5>
     Cruelty-free hair color treatments
     </div>
-    <a href='/appointments'className="button-1" >Book Appointment</a>
+    <a href='/form'className="button-1" >Book Appointment</a>
    
 </div>
 
@@ -29,7 +29,7 @@ function Services({haircut}) {
     </a>
     <div class="desc"><h5>Haircut</h5>
         Includes shampoo, scalp massage and blowdry</div>
-        <a href='/appointments'className="button-1" >Book Appointment</a>
+        <a href='/form'className="button-1" >Book Appointment</a>
   
 </div>
 
@@ -39,7 +39,7 @@ function Services({haircut}) {
     </a>
     <div class="desc"><h5>Manicure</h5>
         Manicure perfect for any occasion</div>
-        <a href='/appointments'className="button-1" >Book Appointment</a>
+        <a href='/form'className="button-1" >Book Appointment</a>
     
 </div>
 
@@ -49,7 +49,7 @@ function Services({haircut}) {
     </a>
     <div class="desc"><h5>Pedicure</h5>
     We provide amazing CBD foot massage</div>
-        <a href='/appointments'className="button-1" >Book Appointment</a>
+        <a href='/form'className="button-1" >Book Appointment</a>
    
 </div>
 
@@ -59,7 +59,7 @@ function Services({haircut}) {
     </a>
     <div class="desc"><h5>Men's Haircut</h5>
         Clean cuts shaves, and detailing</div>
-        <a href='/appointments'className="button-1" >Book Appointment</a>
+        <a href='/form'className="button-1" >Book Appointment</a>
   
 </div>
 <div>

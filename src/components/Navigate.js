@@ -24,7 +24,7 @@ function Navigate() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/services">Services</Nav.Link>
             <Nav.Link href="/form">Book Appointment</Nav.Link>
-            <Nav.Link href="/appointments">Appointments</Nav.Link>
+            <Nav.Link href="/appointments">Appointment</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

@@ -29,7 +29,7 @@ function AppointmentList({appointmentType,id, name, deleteItem, date, appointmen
 
       }),
     })
-      .then((likes) => console.log(id));
+      .then((userName) => console.log(id));
   }
 
   function handleDeleteClick(){
