@@ -12,11 +12,24 @@ import NewForm from './NewForm';
 function App() {
 const [services, setServices] = useState([])
 
-  // useEffect(() => {
-  //   fetch('http://localhost:9292/services')
-  //     .then((res) => res.json())
-  //     .then((data) => console.log(data));
-  // }, []);
+  useEffect(() => {
+    fetch('http://localhost:9292/services')
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, []);
+
+  const serviceList = services.map((service) => 
+  <Services 
+  id={service.id}
+  key={service.id}
+  haircut={service.id[1]}
+  manicure={service.id[2]}
+  pedicure={service.id[3]}
+  mensHaircut={service.id[4]}
+  colorTreatment={service.id[5]}
+  />  )
+
+
 
   return (
     <Router>

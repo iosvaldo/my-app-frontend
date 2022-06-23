@@ -4,11 +4,11 @@ import haircolor from '../Images/Hair_color.jpg'
 import mensHaircut from '../Images/mens_haircut.jpg'
 import manicure from '../Images/manicure.jpg'
 import pedicure from '../Images/pedicure.jpg'
-import haircut from '../Images/haircut.jpg'
+import haircut_img from '../Images/haircut_img.jpg'
 import scissors from '../Images/scissors2.jpg'
 
-function Services() {
-
+function Services({haircut}) {
+console.log(haircut)
   return (
 <div className="main-services">
     
@@ -25,7 +25,7 @@ function Services() {
 
 <div class="gallery">
     <a target="_blank" href="img_forest.jpg">
-        <img src={haircut} alt="Woman getting a haircut" width="600" height="400"/>
+        <img src={haircut_img} alt="Woman getting a haircut" width="600" height="400"/>
     </a>
     <div class="desc"><h5>Haircut</h5>
         Includes shampoo, scalp massage and blowdry</div>
