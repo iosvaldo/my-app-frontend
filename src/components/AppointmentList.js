@@ -28,7 +28,9 @@ function AppointmentList({appointmentType,id, name, deleteItem, date, appointmen
       body: JSON.stringify({
       }),
     })
+
       .then((updatedLikes) => console.log(updatedLikes));
+
   }
 
   function handleDeleteClick(){
