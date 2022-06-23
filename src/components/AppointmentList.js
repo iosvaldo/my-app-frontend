@@ -13,23 +13,22 @@ function AppointmentList({appointmentType,id, name, deleteItem, date, appointmen
  
   const [likes, setLikes] = useState (0)
 
-   function handleClick(e) {
+  //  function handleClick(e) {
+  //   setLikes(likes => likes+1)
+  // }
+
+
+  function handleClick(e) {
     setLikes(likes => likes+1)
-  }
-
-
-  function updateUser(e) {
-    e.preventDefault();
     fetch(`http://localhost:9292/appointments/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-
       }),
     })
-      .then((userName) => console.log(id));
+      .then((updatedLikes) => console.log(updatedLikes));
   }
 
   function handleDeleteClick(){
