@@ -42,7 +42,7 @@ function AppointmentList({appointmentType,id, name, deleteItem, date, appointmen
   // const appointmentType = services.map(service => service.appointment_type)
 
   return (
-    <div>
+    <div className="all-cards">
       <Card className="card-container" style={{ width: '18rem' }}>
         <Card.Body >
           <Card.Title>{name}</Card.Title>

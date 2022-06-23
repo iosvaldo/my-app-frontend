@@ -47,7 +47,8 @@ function Appointments({name}) {
       
       <br></br>
        <NewForm addAppointment = {addAppointment}/>
-       {appointmentList}
+       <div className='all-cards-again'> {appointmentList}</div>
+       
     </div>
   )
 }
