@@ -9,6 +9,7 @@ function NewForm( {appointmentList, addAppointment} ) {
     date: "",
     appointment_type: "",
     time: "",
+    // category_id: + 1
   })
 
   function handleOnChange(e){
@@ -50,6 +51,9 @@ function NewForm( {appointmentList, addAppointment} ) {
       <option value="Men's Haircut">Men's Haircut</option>
       <option value="Manicure">Manicure</option>
       <option value="Pedicure">Pedicure</option>
+      {/* map through and create an option for each id=index id created based on slection 
+      index+1 for the POST request manually assign id in the map
+      create table */}
     </Form.Select>
     <br></br>
     <Form.Select onChange={handleOnChange} name="time" value={formData.time} id="time" aria-label="Default select example">
