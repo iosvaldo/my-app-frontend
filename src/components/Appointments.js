@@ -2,9 +2,9 @@ import React, {useState, useEffect} from 'react'
 import AppointmentList from './AppointmentList'
 import NewForm from './NewForm';
 
-function Appointments({name}) {
+function Appointments() {
   const [appointments,setAppointments]= useState([])
-  const [services, setServices] = useState([])
+  const [likes, setLikes] = useState("100")
 
   useEffect(() => {
     fetch('http://localhost:9292/appointments')
@@ -27,6 +27,10 @@ function Appointments({name}) {
     setAppointments(filteredList)
   }
 
+// function handleUpdateLikes(likes) {
+
+// }
+
   // const serviceList = services.map((service) =>(
   //    <AppointmentList key={service.id} service={service.appointment_type} />))
 
@@ -35,6 +39,9 @@ function Appointments({name}) {
     id = {appointment.id}
     key = {appointment.id}
     name = {appointment.username}
+    likes = {likes}
+    setLikes = {setLikes}
+    // handleUpdateLikes = {handleUpdateLikes}
     // appointmentType = {appointment.service.service}
     date = {appointment.date}
     deleteItem={handleDelete}
@@ -46,8 +53,10 @@ function Appointments({name}) {
     <div>
       
       <br></br>
-       <NewForm addAppointment = {addAppointment}/>
-       {appointmentList}
+       <NewForm addAppointment = {addAppointment} />
+       {/* <NewForm addAppointment = {addAppointment} onUpdateLikes ={handleUpdateLikes}/> */}
+       <div className='all-cards-again'> {appointmentList}</div>
+       
     </div>
   )
 }
