@@ -1,23 +1,19 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../Images/world_class_logo2.jpg'
 
 
-
-
 function Navigate() {
-  // const {salons, setSalons} = useState("")
 
-  useEffect(() => {
-    fetch('http://localhost:9292')
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  }, []);
-  // const name = console.log({salon.name})
-// const salon = salons.map((salon) => (
-//   name = {salon.name}
+
+  // useEffect(() => {
+  //   fetch('http://localhost:9292')
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data));
+  // }, []);
+
   return (
 
     <div>
@@ -28,8 +24,7 @@ function Navigate() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/services">Services</Nav.Link>
             <Nav.Link href="/form">Book Appointment</Nav.Link>
-            <Nav.Link href="/appointments">Appointment</Nav.Link>
-            
+            <Nav.Link href="/appointments">Appointments</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

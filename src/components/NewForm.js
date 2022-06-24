@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import Appointments from './Appointments'
+// import Appointments from './Appointments'
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
@@ -17,8 +17,8 @@ function NewForm( {appointmentList, addAppointment} ) {
   } 
 
   function handleSubmit(e){
+    alert("Thank you for booking an appointment. See you soon!")
     e.preventDefault()
-    console.log(formData)
     fetch("http://localhost:9292/appointments", {
       method: "POST",
       headers: {
@@ -34,7 +34,8 @@ function NewForm( {appointmentList, addAppointment} ) {
 
   return (
     <div>
-    <Form onSubmit={handleSubmit}>
+      <h2 className="form-title">Book an Appointment</h2>
+    <Form className="main-form" onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
         <Form.Label>Name:</Form.Label>
         <Form.Control onChange={handleOnChange} name="username" type="text"  placeholder="Enter your full name here" />
@@ -43,7 +44,7 @@ function NewForm( {appointmentList, addAppointment} ) {
         <Form.Label>Date</Form.Label>
         <Form.Control onChange={handleOnChange} name="date" as="textarea" rows={1} />
       </Form.Group>
-      <Form.Select onChange={handleOnChange} name="appointment_type" aria-label="Default select example">
+      <Form.Select onChange={handleOnChange} name="service" aria-label="Default select example">
       <option>Services</option>
       <option value="Color Treatmemt">Color Treatment</option>
       <option value="Haircut">Haircut</option>
