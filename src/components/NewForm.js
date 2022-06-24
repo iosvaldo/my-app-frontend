@@ -30,6 +30,12 @@ function NewForm( {appointmentList, addAppointment} ) {
       .then((res) => res.json())
       .then((newAppointment) => addAppointment(newAppointment)
       );
+      setFormData({
+        username: "",
+        date: "",
+        appointment_type: "",
+        time: "",
+      })
   };
 
   return (
