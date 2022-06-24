@@ -5,32 +5,66 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 
-function AppointmentList({appointmentType,id, name, deleteItem, date, appointments}) {
+function AppointmentList({appointmentType,id, name, deleteItem, date, appointments,likes,setLikes, handleUpdateLikes}) {
 
+
+  // useEffect(()=>{
+  //   fetch(`http://localhost:9292/appointments/${id}`) 
+  //     .then((r)=>r.json())
+  //     .then(setLikeArray)
+  // }, [])
+
+
+  // function handleUpdateLikes(updateLikes){
+  //   const updateLikes = likeArray.map((appointmentLikes)=>
+  //   appointmentLikes.id === updateLikes.id ? updateLikes : appointmentLikes
+  //   );
+  //   setLikesArray(updateLikes);
+  // }
+
+  // function handleClick() {
+  //    setLikes(likes => likes+1)
   
+  //   fetch(`http://localhost:9292/appointments/${id}`, {
+  //     method: "PATCH",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
 
-  const [editAppointment, setEditAppointment] = useState([]);
- 
-  const [likes, setLikes] = useState (0)
-
-   function handleClick(e) {
-    setLikes(likes => likes+1)
-  }
+  //     }),
+  //   })
+  //     .then((likes) => setLikes(likes));
+  // }
 
 
-  function updateUser(e) {
-    e.preventDefault();
+
+
+
+function handleLikes() {
+  const updateLikes = {
+     likes:likes.id + 1,
+     };
+  
     fetch(`http://localhost:9292/appointments/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        likes: 100
+      }
+      ),
 
-      }),
-    })
-      .then((likes) => console.log(id));
+      })
+      .then((r)=> r.json())
+      .then(data => setLikes(data));
   }
+
+
+
+
+
 
   function handleDeleteClick(){
     fetch(`http://localhost:9292/appointments/${id}`,{
@@ -49,7 +83,8 @@ function AppointmentList({appointmentType,id, name, deleteItem, date, appointmen
           <Card.Subtitle className="mb-2 text-muted"></Card.Subtitle>
           <Card.Subtitle className="mb-2 text-muted">{date}</Card.Subtitle>
           <Card.Text>We are so excited to see you!</Card.Text> 
-          <Button variant="danger" onClick={handleClick}>♡ {likes}</Button>  
+          {/* <Button variant="danger" >♡ {likes}</Button>   */}
+          <Button variant="danger" onClick={handleLikes}>♡ {likes}</Button>
           <Button class="button-2"  variant="warning" onClick={handleDeleteClick}>🗑️</Button> 
     
         </Card.Body>
