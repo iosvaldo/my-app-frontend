@@ -4,7 +4,6 @@ import NewForm from './NewForm'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-
 function AppointmentList({id, name, deleteItem, date}) {
   const [likes, setLikes] = useState (0)
 
@@ -35,6 +34,7 @@ function AppointmentList({id, name, deleteItem, date}) {
       .then((updatedLikes) => handleLike(updatedLikes));
   }
 
+
   function handleDeleteClick(){
     fetch(`http://localhost:9292/appointments/${id}`,{
       method: 'DELETE'
@@ -42,10 +42,8 @@ function AppointmentList({id, name, deleteItem, date}) {
     .then(deleteItem(id))
   }
 
-  // const appointmentType = services.map(service => service.appointment_type)
-
   return (
-    <div>
+    <div className="all-cards">
       <Card className="card-container" style={{ width: '18rem' }}>
         <Card.Body >
           <Card.Title>{name}</Card.Title>
@@ -54,11 +52,8 @@ function AppointmentList({id, name, deleteItem, date}) {
           <Card.Text>We are excited to see you!</Card.Text> 
           <Button variant="danger" onClick={handleClick}>♡ {likes}</Button>  
           <Button className="button-2"  variant="warning" onClick={handleDeleteClick}>🗑️</Button> 
-    
         </Card.Body>
       </Card>
-      
-      
     </div>
   )
 }
