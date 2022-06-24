@@ -12,12 +12,6 @@ function Appointments({name}) {
       .then((data) => setAppointments(data));
   }, []);
 
-  // useEffect(() => {
-  //   fetch('http://localhost:9292/services')
-  //     .then((res) => res.json())
-  //     .then((services) => setServices(services));
-  // }, []);
-
 
   function addAppointment(newData) {
     return setAppointments([...appointments, newData]);
@@ -40,6 +34,7 @@ function Appointments({name}) {
     deleteItem={handleDelete}
     />
   ))
+  
  
 
   return (
