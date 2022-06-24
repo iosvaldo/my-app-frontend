@@ -38,14 +38,13 @@ function AppointmentList({appointmentType,id, name, deleteItem, date, appointmen
   // }
 
 
-
-
-
 function handleLikes() {
   const updateLikes = {
      likes:likes.id + 1,
      };
-  
+
+  function handleClick(e) {
+    setLikes(likes => likes+1)
     fetch(`http://localhost:9292/appointments/${id}`, {
       method: "PATCH",
       headers: {
@@ -53,17 +52,12 @@ function handleLikes() {
       },
       body: JSON.stringify({
         likes: 100
-      }
-      ),
+      } ),
 
       })
       .then((r)=> r.json())
       .then(data => setLikes(data));
-  }
-
-
-
-
+      }),
 
 
   function handleDeleteClick(){
