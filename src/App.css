@@ -74,7 +74,11 @@ div.desc {
   position: relative;
   text-align: center;
   background-color: #f20d703b;
-  padding-left: 100px
+}
+
+.btn.btn-danger {
+  margin: 10px; 
+
 }
 
 .button-1:hover,
@@ -124,14 +128,12 @@ text-align: center;
 }
 
 .card-container {
-
   /* width:100%; */
   margin: 0 auto;
   border: 1px solid #ccc;
   width: 250px;
  
 }
-
 
 .all-cards-again {
   display: flex;

@@ -8,12 +8,6 @@ import logo from '../Images/world_class_logo2.jpg'
 function Navigate() {
 
 
-  // useEffect(() => {
-  //   fetch('http://localhost:9292')
-  //     .then((res) => res.json())
-  //     .then((data) => console.log(data));
-  // }, []);
-
   return (
 
     <div>

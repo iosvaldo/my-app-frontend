@@ -21,13 +21,6 @@ function Appointments() {
     setAppointments(filteredList)
   }
 
-// function handleUpdateLikes(likes) {
-
-// }
-
-  // const serviceList = services.map((service) =>(
-  //    <AppointmentList key={service.id} service={service.appointment_type} />))
-
   const appointmentList = appointments.map((appointment) => (
     <AppointmentList 
     id = {appointment.id}
@@ -35,8 +28,6 @@ function Appointments() {
     name = {appointment.username}
     likes = {likes}
     setLikes = {setLikes}
-    // handleUpdateLikes = {handleUpdateLikes}
-    // appointmentType = {appointment.service.service}
     date = {appointment.date}
     deleteItem={handleDelete}
     />

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 // import Appointments from './Appointments'
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -29,13 +29,15 @@ function NewForm( {appointmentList, addAppointment} ) {
     })
       .then((res) => res.json())
       .then((newAppointment) => addAppointment(newAppointment)
+
       );
-      setFormData({
-        username: "",
-        date: "",
-        appointment_type: "",
-        time: "",
-      })
+      // setFormData({
+      //   username: "",
+      //   date: "",
+      //   appointment_type: "",
+      //   time: "",
+      // })
+      
   };
 
   return (
@@ -48,7 +50,7 @@ function NewForm( {appointmentList, addAppointment} ) {
       </Form.Group>
       <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
         <Form.Label>Date</Form.Label>
-        <Form.Control onChange={handleOnChange} name="date" as="textarea" rows={1} />
+        <Form.Control placeholder="Enter date of appointment here" onChange={handleOnChange} name="date" as="textarea" rows={1} />
       </Form.Group>
       <Form.Select onChange={handleOnChange} name="service" aria-label="Default select example">
       <option>Services</option>
